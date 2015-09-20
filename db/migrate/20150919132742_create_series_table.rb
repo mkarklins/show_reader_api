@@ -8,6 +8,14 @@ class CreateSeriesTable < ActiveRecord::Migration
       t.date :first_aired_at, null: false
       t.string :imdb_id, null: false
       t.string :network, null: false
+
+      t.text :actors
+      t.string :air_time
+      t.string :air_day
+      t.string :content_rating
+      t.string :status
+      t.integer :last_updated
+
       t.timestamps null: false
     end
 

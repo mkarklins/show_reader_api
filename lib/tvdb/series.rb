@@ -9,8 +9,6 @@ module Tvdb
 
     def initialize(response)
       @response = response
-      @parsed_response = Nokogiri::XML(response)
-      @parsed_response = parsed_response.xpath("//Data/Series").first.element_children
     end
 
     def name
@@ -55,6 +53,10 @@ module Tvdb
     end
 
     private
+
+      def parsed_response
+        @parsed_response ||= Nokogiri::XML(response).xpath("//Data/Series").first.element_children
+      end
 
       def extract_value_by(name:)
         value = parsed_response.detect{|a| a.name == name}.text

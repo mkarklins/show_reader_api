@@ -1,8 +1,9 @@
 module Tvdb
 
   class << self
+
     def api_key
-      "85C5C161A73B6F12"
+      @api_key || "85C5C161A73B6F12"
     end
 
     def mirror_path
