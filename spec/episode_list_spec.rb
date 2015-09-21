@@ -12,7 +12,20 @@ describe Tvdb::EpisodeList do
     )
   end
 
-  it "parses zip" do
+  it "returns an episode list" do
     binding.pry
+    expect(subject.class).to be described_class
+  end
+
+  it "parses all episodes" do
+    expect(subject.count).to be 272
+  end
+
+  it "parses each episode as Tvdb::Episode object" do
+    expect(subject.first.class).to be Tvdb::Episode
+  end
+
+  it "implements each method" do
+    expect(subject.respond_to?(:each)).to be true
   end
 end
