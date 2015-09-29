@@ -13,7 +13,6 @@ describe Tvdb::EpisodeList do
   end
 
   it "returns an episode list" do
-    binding.pry
     expect(subject.class).to be described_class
   end
 

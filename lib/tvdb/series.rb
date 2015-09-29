@@ -21,7 +21,7 @@ module Tvdb
 
     def first_aired_at
       aired_at = extract_value_by(name: "FirstAired")
-      Date.strptime(aired_at, "%Y-%m-%d")
+      aired_at && Date.strptime(aired_at, "%Y-%m-%d")
     end
 
     def network
