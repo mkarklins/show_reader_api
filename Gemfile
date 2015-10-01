@@ -10,12 +10,13 @@ gem 'rest-client'
 gem 'rspec-rails', group: :test
 gem 'pry-rails'
 gem 'webmock', group: :test
+gem 'factory_girl_rails', group: :test
+gem 'jbuilder'
 
 #TVDB
 gem 'rubyzip'
 
 ruby '2.2.3'
 # To use Jbuilder templates for JSON
-# gem 'jbuilder'
 
 # Deploy with Capistrano

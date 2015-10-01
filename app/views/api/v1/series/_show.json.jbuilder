@@ -1,0 +1,10 @@
+json.id series_item.id
+json.name series_item.name
+json.series_id series_item.series_id
+json.banner_path series_item.banner_path
+json.description series_item.description
+json.first_aired_at series_item.first_aired_at
+json.imdb_id series_item.imdb_id
+json.network series_item.network
+json.created_at series_item.created_at
+json.updated_at series_item.updated_at
